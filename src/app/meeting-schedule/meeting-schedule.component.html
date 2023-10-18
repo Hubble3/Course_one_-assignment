@@ -1,0 +1,21 @@
+<div class="meeting-schedule-container">
+  <h2>Meeting Schedule</h2>
+  <form (ngSubmit)="onSubmit()" class="meeting-form">
+    <div class="form-group">
+      <label for="topic">Meeting Topic:</label>
+      <input type="text" id="topic" name="topic" [(ngModel)]="meeting.topic" required>
+    </div>
+
+    <div class="form-group">
+      <label for="people">Number of People:</label>
+      <input type="number" id="people" name="people" [(ngModel)]="meeting.people" required>
+    </div>
+
+    <div class="form-group">
+      <label for="start-time">Start Time:</label>
+      <input type="datetime-local" id="start-time" name="start-time" [(ngModel)]="meeting.startTime" required>
+    </div>
+
+    <button type="submit">Schedule Meeting</button>
+  </form>
+</div>
